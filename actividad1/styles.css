@@ -1,0 +1,453 @@
+/* BASE NEUTRA: “se ve bien, pero sin personalidad” */
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background: #f8fafc;
+}
+
+h1, h2, h3, p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+/* Skip link */
+.skip__link {
+  position: absolute;
+  left: -999px;
+  top: 8px;
+  background: #111;
+  color: #fff;
+  padding: 8px 10px;
+  z-index: 9999;
+}
+.skip__link:focus {
+  left: 8px;
+  top: 8px;
+  z-index: 9999;
+  padding: 12px 16px;
+  background: #2563eb;
+  color: white;
+  border-radius: 4px;
+}
+
+/* Header */
+.header {
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+}
+
+.brand__logo {
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+  text-align: center;
+  border-radius: 10px;
+  background: #2563eb;
+  color: #fff;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.brand__text { display: inline-block; vertical-align: top; }
+.brand__name { display: block; font-weight: bold; }
+.brand__tag { display: block; color: #666; font-size: 0.95rem; }
+
+.nav { margin: 0; }
+.nav__item { margin-right: 14px; }
+.nav a { color: #2563eb; text-decoration: none; }
+.nav a:hover { text-decoration: underline; }
+
+/* Estilos específicos para lista de navegación */
+.nav__list {
+  margin: 0;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav__item {
+  display: inline-block;
+  margin-right: 14px;
+}
+
+.cta {
+  margin: 0;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  border: 1px solid transparent;
+  font-size: 16px;
+}
+
+.btn--primary {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+}
+
+.btn--ghost {
+  background: transparent;
+  color: #2563eb;
+  border-color: #cfe0ff;
+}
+.btn--full { width: 100%; text-align: center; }
+
+/* Hero */
+.hero {
+  background: #1e293b;
+  color: #e5e7eb;
+  padding: 30px 0;
+}
+
+.hero__title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.hero__subtitle { color: #e2e8f0; }
+
+.badge {
+  display: inline-block;
+  padding: 6px 10px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 999px;
+  font-size: 0.9rem;
+}
+
+.hero__actions { margin: 16px 0; }
+
+.hero__stats { margin-top: 16px; }
+.stat { display: inline-block; margin-right: 18px; }
+.stat__num { font-weight: bold; font-size: 1.1rem; }
+.stat__label { color: #cbd5e1; font-size: 0.9rem; }
+
+/* Cards */
+.card {
+  background: #fff;
+  color: #1e293b;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.card--soft {
+  background: #ffffff;
+}
+
+.card__title { font-weight: bold; font-size: 1.1rem; }
+.card__desc { margin-top: 8px; color: #4b5563; }
+
+/* Sections */
+.section { padding: 60px 0; }
+.section--alt { background: #ffffff; border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
+
+.section__kicker { color: #2563eb; font-weight: bold; }
+.section__title { font-size: 30px; margin-bottom: 16px; }
+.section__desc { color: #4b5563; }
+
+/* Pills */
+.pill-list { margin-top: 10px; }
+.pill {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #eff6ff;
+  color: #2563eb;
+  margin: 8px 8px 0 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Lists/Blocks */
+.cards, .cases, .pricing, .posts, .testimonials, .contact {
+  margin-top: 18px;
+}
+
+.case, .plan, .post, .quote {
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 16px;
+  background: #fff;
+  margin-bottom: 12px;
+}
+
+.plan--featured {
+  border-color: #2563eb;
+}
+.posts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.post {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.post__desc {
+  flex-grow: 1;
+  margin-bottom: 16px;
+  color: #4b5563;
+}
+
+/* Form */
+.form__label { font-weight: bold; margin-bottom: 6px; }
+.input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-family: inherit;
+  transition: border-color 0.2s;
+}
+
+.input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  outline: none;
+}
+
+.form__hint { color: #4b5563; font-size: 0.9rem; margin-top: 8px; }
+
+/* Mejoras para formularios accesibles */
+label {
+  display: block;
+  cursor: pointer;
+  margin-bottom: 4px;
+}
+
+button, input, textarea {
+  font-family: inherit;
+  font-size: 16px;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Estilos básicos para encabezados semánticos */
+h1 {
+  font-size: 32px;
+  margin-bottom: 12px;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+/* Mejorar párrafos */
+p {
+  margin-bottom: 16px;
+}
+
+/* Footer */
+.footer {
+  background: #0b1220;
+  color: #d1d5db;
+  padding: 26px 0;
+}
+
+.footer a { color: #9cc2ff; text-decoration: none; }
+.footer a:hover { text-decoration: underline; }
+
+.footer__title { font-weight: bold; margin-bottom: 8px; }
+.footer__brand { font-weight: bold; font-size: 1.1rem; }
+.footer__text { color: #cbd5e1; margin-top: 6px; }
+
+.footer__bottom {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255,255,255,0.12);
+  display: block;
+}
+
+/* Estilos para listas del footer */
+.footer__links li {
+  margin-bottom: 6px;
+}
+
+.footer__links a {
+  color: #9cc2ff;
+  text-decoration: none;
+}
+
+.footer__links a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   MEDIA QUERIES (RESPONSIVE)
+   ========================= */
+
+/* Mobile: ajustes */
+@media (max-width: 767px) {
+  /* Header vertical en móvil */
+  .header .container {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .nav {
+    order: 3;
+    width: 100%;
+  }
+  
+  .nav__list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .cta {
+    order: 2;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .hero__title { font-size: 32px; }
+  .section__title { font-size: 28px; }
+  
+  /* vertical en móvil */
+  .cards .card--soft,
+  .pricing .plan,
+  .posts .post {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  
+  .btn {
+    padding: 10px 16px;
+    font-size: 15px;
+  }
+}
+
+/* Tablet: cambios visibles */
+@media (min-width: 768px) {
+  .header .container {
+    display: flex;
+    padding: 18px 0;
+  }
+
+  .hero__grid {
+    display: block;
+  }
+
+  .cards, .cases, .posts {
+    display: block;
+  }
+
+  .section__title { font-size: 34px; }
+  .hero__title { font-size: 42px; }
+  .section { 
+    padding: 70px 0; 
+  }
+}
+
+/* Escritorio: layout más “pro” sin enseñar flex/grid a fondo */
+@media (min-width: 1024px) {
+  .header .container {
+    display: flex;
+  }
+  
+  .hero__title { font-size: 48px; }
+  .section__title { font-size: 38px; }
+  .section { padding: 80px 0; }
+
+  /* layout 2 columnas (sin grid; usando inline-block) */
+  .hero__copy, .hero__card {
+    display: inline-block;
+    vertical-align: top;
+    width: 58%;
+  }
+  .hero__card { width: 38%; margin-left: 3%; }
+
+  .cards .card--soft {
+    display: inline-block;
+    width: 31%;
+    vertical-align: top;
+    margin-right: 2%;
+  }
+  .cards .card--soft:last-child { margin-right: 0; }
+
+  .pricing .plan {
+    display: inline-block;
+    width: 31%;
+    vertical-align: top;
+    margin-right: 2%;
+  }
+  .pricing .plan:last-child { margin-right: 0; }
+
+  .posts .post {
+    flex: 1;
+    min-width: 300px;
+    margin-right: 0;
+  }
+
+  .contact__left, .contact__right {
+    display: inline-block;
+    width: 48%;
+    vertical-align: top;
+  }
+  .contact__right { margin-left: 3%; }
+
+  .footer__grid > div {
+    display: inline-block;
+    width: 31%;
+    vertical-align: top;
+    margin-right: 2%;
+  }
+  .footer__grid > div:last-child { margin-right: 0; }
+}
